@@ -42,8 +42,11 @@ function App() {
   };
 
   return (
-    <div className='grid place-content-center'>
-      <h1 className='text-center text-3xl mt-5 font-bold'>Rick and Morty Personajes</h1>
+    <div 
+    className=" bg-fixed  bg-center bg-no-repeat bg-cover"
+    style={{ backgroundImage: `url('/estrellas.jpg')` }}>
+    {/* Contenido de tu página aquí */}
+      <h1 className='text-center text-3xl text-white pt-5 font-black'>Rick and Morty Personajes</h1>
 
       <Favorites
         favorites={favorites}
@@ -55,7 +58,7 @@ function App() {
         <button className='px-4 bg-slate-300 rounded-md font-semibold' onClick={handlePrevious} disabled={page === 1}>
           Atras
         </button>
-        <span className='mx-3 font-semibold'> Página {page} de {totalPages}</span>
+        <span className='mx-3 text-white p-3 font-semibold'> Página {page} de {totalPages}</span>
         <button className='px-4 bg-slate-300 rounded-md font-semibold' onClick={handleNext} disabled={page === totalPages}>
           Siguiente
         </button>
@@ -68,17 +71,15 @@ function App() {
         />
 
       </div>
-      <div className='flex justify-center mb-10'>
+      <div className='flex justify-center pb-10'>
         <button className='px-4 bg-slate-300 rounded-md font-semibold' onClick={handlePrevious} disabled={page === 1}>
           Atras
         </button>
-        <span className='mx-3 font-semibold'> Página {page} de {totalPages}</span>
+        <span className='px-3 text-white font-semibold'> Página {page} de {totalPages}</span>
         <button className='px-4 bg-slate-300 rounded-md font-semibold' onClick={handleNext} disabled={page === totalPages}>
           Siguiente
         </button>
       </div>
-
-
     </div>
   );
 }

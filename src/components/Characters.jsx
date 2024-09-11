@@ -2,9 +2,9 @@
 export const Characters = ({ characters, addToFavorites }) => {
 
     return (
-        <ul className="grid grid-cols-3 gap-20  ">
+        <ul className="grid grid-cols-3 gap-20">
             {characters.map((character) => (
-                <li className="shadow-lg bg-slate-100 rounded-2xl p-2" key={character.id}>
+                <li className="shadow-lg bg-white/15 text-white rounded-2xl p-2" key={character.id}>
                     <h2 className="text-lg font-semibold">Nombre: {character.name}</h2>
                     <p> Especie: {character.species}</p>
                     <img className="w-full" src={character.image} alt={character.name} />
